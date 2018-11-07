@@ -1,55 +1,48 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title></title>
-		<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-		<!--<script src="js/confirm.min.js" type="text/javascript" charset="utf-8"></script>-->
-		<script src="js/confirm.js" type="text/javascript" charset="utf-8"></script>
-	</head>
-	<body>
-		<div class="box">
-			<button onclick='btn()'>点击</button>
-			<br/>
-			<br/>
-			<div>操作结果：<span id='result'></span></div>
-			<br/>
-			<br/>
-			<div>输入内容：<span id='text'></span></div>
-		</div>
-		<script type="text/javascript">
-			console.log("%c邮箱  %cqiao_915@yeah.net%c  欢迎技术交流探讨","text-shadow:none"," text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);font-size:3em","text-shadow:none");
-			onload=function(){
-				btn = function(){
-					$.ConfirmBox({
-						title:'title',   //提示弹框title   默认值：''
-						msg:'提示文字',//提示文字   默认值：''
-						confirmBtn:{ // 确定按钮
-							text:'确定',    //确定按钮文本     默认值：'确定'
-							color:"#fff",//文本字体颜色     默认值：'#fff'
-							background:"#409eff",//按钮背景颜色     默认值：'#409eff'
-						},
-						cancelBtn:{ // 取消按钮
-							text:'取消',//取消按钮文本     默认值：'取消'
-							color:"#333",//文本字体颜色     默认值：'#333'
-							background:"#fff",//取按钮背景颜色     默认值：'#fff'
-						},
-						isCancel:true, // 是否显示取消按钮     默认值：true
-						isConfirm:true,//是否显示确定按钮     默认值：true
-						isMag:true,//是否显示提示框标题栏     默认值：true
-						isInput:true,//是否显示input输入框     默认值：true
-						confirm:(value)=>{	// 确定调用方法
-							$('#result').html("您点击了确认");
-							$('#text').html(value);
-						},
-						cancel:()=>{	// 取消调用方法
-							$('#result').html("您点击了取消");
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title></title>
+	<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/confirm.js" type="text/javascript" charset="utf-8"></script>
 
-						}
-					});
-				}
-			}
-		</script>
-	</body>
+</head>
+<body>
+<div class="box">
+	<button onclick='btn()'>点击</button>
+	<br/>
+	<br/>
+	<div>操作结果：<span id='result'></span></div>
+	<br/>
+	<br/>
+	<div>输入内容：<span id='text'></span></div>
+</div>
+<script type="text/javascript">
+    console.log("%c邮箱  %cqiao_915@yeah.net%c  欢迎技术交流探讨","text-shadow:none"," text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);font-size:3em","text-shadow:none");
+    onload=function(){
+        btn = function(){
+            $.ConfirmBox({
+                title:'title',   						/// 提示弹框title   默认值：''
+                msg:'提示文字提示文字提示文字提示文字提示文字提示文字提示文字提示文字提示文字提示文字提示文字提示文字',		 					 /// 提示文字   默认值：''
+                type:"success",   						/// 提示类型  error错误   success成功  Warning警告  不给则为Warning
+                confirmBtnText:'确定',
+                cancelBtnText:'取消',
+                isCancel:true, 							/// 是否显示取消按钮     默认值：true
+                isConfirm:true,							/// 是否显示确定按钮     默认值：true
+                isMag:true,								/// 是否显示提示框标题栏     默认值：true
+                isInput:true,							/// 是否显示input输入框     默认值：true
+                confirm:(value)=>{						/// 确定调用方法
+                    $('#result').html("您点击了确认");
+                    $('#text').html(value);
+                },
+                cancel:()=>{							/// 取消调用方法
+                    $('#result').html("您点击了取消");
+
+                }
+            });
+        }
+    }
+</script>
+</body>
 </html>
